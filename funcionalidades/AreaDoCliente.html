@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Área do Cliente — Net Vale</title>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+
+  <body>
+    <header>
+      <div class="nav-links" role="navigation" aria-label="links principais">
+        <a href="AreaDoCliente.html">Área do Cliente</a>
+        <a href="SobreNos.html">Sobre Nós</a>
+        <a href="PlanosEAdesao.html">Planos</a>
+        <a class="active" href="Reclamaçoes.html">Reclamações</a>
+        <a href="index.html">Início</a>
+        <a
+          class="cta"
+          href="https://wa.me/3398347286?text=Olá,%20gostaria%20de%20ajuda%20com%20minha%20conta"
+        >
+          Suporte via WhatsApp
+        </a>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="intro">
+        <h1>Bem-vindo(a) à sua Área do Cliente</h1>
+        <p>
+          Aqui você pode gerenciar sua conta Net Vale com facilidade: emitir
+          boletos, consultar histórico de pagamentos, atualizar dados e acessar
+          o suporte técnico exclusivo.
+        </p>
+      </section>
+
+      <section style="margin-top: 3rem; text-align: center">
+        <h2>Acessar Portal Oficial</h2>
+        <p style="max-width: 600px; margin: 0 auto; color: var(--muted)">
+          Para acessar todas as funcionalidades reais da sua conta — como
+          faturas, histórico, relatórios e suporte técnico completo — acesse o
+          portal oficial da Net Vale clicando no botão abaixo:
+        </p>
+
+        <a
+          class="cta"
+          href="https://netvale.sgp.tsmx.com.br/accounts/central/login"
+          target="_blank"
+          rel="noopener noreferrer"
+          style="display: inline-block; margin-top: 1rem"
+        >
+          Ir para o Portal do Cliente
+        </a>
+      </section>
+
+      <section style="margin-top: 3rem">
+        <h2>Dúvidas Frequentes</h2>
+        <p>
+          Consulte as respostas para as principais perguntas sobre nossos
+          serviços.
+        </p>
+        <a class="cta secondary" href="DuvidasFrequentes.html">Ver dúvidas</a>
+      </section>
+    </main>
+    ->
+    <footer style="margin-top: 4rem">
+      <div
+        class="container"
+        style="
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          gap: 12px;
+          flex-wrap: wrap;
+        "
+      >
+        <div>
+          <strong>Net Vale</strong><br />
+          <span style="color: var(--muted)">Conectando o seu mundo</span>
+        </div>
+        <div style="text-align: right">
+          <div style="color: var(--muted)">
+            © <span id="ano"></span> Net Vale — Todos os direitos reservados
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("ano").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>

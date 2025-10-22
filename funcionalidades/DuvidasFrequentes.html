@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Dúvidas Frequentes — Net Vale</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/duvidas.css" />
+  </head>
+
+  <body>
+    <header>
+      <div class="nav-links" role="navigation" aria-label="links principais">
+        <a href="AreaDoCliente.html">Área do Cliente</a>
+        <a href="SobreNos.html">Sobre Nós</a>
+        <a href="PlanosEAdesao.html">Planos</a>
+        <a class="active" href="Reclamaçoes.html">Reclamações</a>
+        <a href="index.html">Início</a>
+        <a class="active" href="DuvidasFrequentes.html">Dúvidas Frequentes</a>
+      </div>
+    </header>
+
+    <main class="container">
+      <h1>Dúvidas Frequentes</h1>
+      <p>
+        Encontre aqui as respostas para as principais dúvidas sobre nossos
+        serviços e atendimento:
+      </p>
+
+      <div class="faq-container">
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Há fidelidade nos planos da Net Vale?
+            <span>+</span>
+          </button>
+          <div class="faq-answer" role="region" aria-hidden="true">
+            Alguns planos podem ter período de fidelidade, principalmente quando
+            há desconto ou instalação grátis. Verifique as condições no seu
+            contrato ou entre em contato com o atendimento para confirmar se o
+            seu plano tem fidelidade e quais são as multas em caso de
+            cancelamento antecipado.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            A Net Vale aceita débito automático ou PIX?
+            <span>+</span>
+          </button>
+          <div class="faq-answer" role="region" aria-hidden="true">
+            A forma de pagamento disponível pode variar. Algumas regionais
+            aceitam débito automático (cartão ou conta bancária) — já o PIX pode
+            não ser aceito em todos os canais. Consulte a Área do Cliente ou
+            entre em contato com o suporte para confirmar as opções de pagamento
+            disponíveis para a sua conta.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Minha internet está lenta, o que devo fazer?
+            <span>+</span>
+          </button>
+          <div class="faq-answer" role="region" aria-hidden="true">
+            1. Reinicie o modem/roteador (desligue da tomada por 30s e ligue
+            novamente).<br />
+            2. Teste a velocidade em sites confiáveis (ex.: Speedtest). Compare
+            com a velocidade do seu plano.<br />
+            3. Conecte um dispositivo por cabo (ethernet) para checar se o
+            problema é Wi-Fi.<br />
+            4. Verifique se há muitos dispositivos ativos ou downloads/streams
+            pesados.<br />
+            5. Se o problema persistir, abra um chamado técnico — anote horário,
+            resultado do teste e dispositivos afetados para agilizar o
+            atendimento.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Como reiniciar corretamente o roteador/modem?
+            <span>+</span>
+          </button>
+          <div class="faq-answer" role="region" aria-hidden="true">
+            1. Desconecte o roteador/modem da energia (não apenas o botão).<br />
+            2. Aguarde 30 segundos — isso permite que a memória interna seja
+            limpa.<br />
+            3. Conecte novamente e aguarde a inicialização completa (as luzes
+            estabilizarem), normalmente 1–3 minutos.<br />
+            4. Se tiver modem e roteador separados, reinicie primeiro o modem e,
+            após ele estabilizar, reinicie o roteador.<br />
+            5. Caso precise, faça um reset de fábrica (botão RESET) apenas se
+            souber reconfigurar a senha/PPPoe; esse procedimento apaga
+            configurações.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Como alterar meu plano de internet?
+            <span>+</span>
+          </button>
+          <div class="faq-answer">
+            Acesse a <a href="PlanosEAdesao.html">página de Planos</a> para ver
+            as opções disponíveis, escolha o plano que você deseja e entre em
+            contato com nosso time para realizar a migração de forma rápida.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Posso mudar o endereço de instalação da internet?
+            <span>+</span>
+          </button>
+          <div class="faq-answer">
+            Sim! Basta entrar em contato com o suporte informando o novo
+            endereço. Um técnico verificará a disponibilidade e agendará a
+            reinstalação sem perda do seu plano atual.
+          </div>
+        </div>
+      </div>
+
+      <p style="margin-top: 2rem">
+        Se sua dúvida não estiver aqui, fale conosco pelo
+        <a href="https://wa.me/553398347286" style="color: var(--accent)"
+          >WhatsApp</a
+        >.
+      </p>
+    </main>
+
+    <footer style="margin-top: 4rem">
+      <div
+        class="container"
+        style="
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          flex-wrap: wrap;
+          gap: 12px;
+        "
+      >
+        <div>
+          <strong>Net Vale</strong><br />
+          <span style="color: var(--muted)">Conectando o seu mundo</span>
+        </div>
+        <div style="text-align: right; color: var(--muted)">
+          © <span id="ano"></span> Net Vale — Todos os direitos reservados
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("ano").textContent = new Date().getFullYear();
+      document.querySelectorAll(".faq-question").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const item = btn.parentElement;
+          const answer = item.querySelector(".faq-answer");
+          const isActive = item.classList.toggle("active");
+          btn.setAttribute("aria-expanded", isActive);
+          answer.setAttribute("aria-hidden", !isActive);
+        });
+      });
+    </script>
+  </body>
+</html>
