@@ -1,10 +1,18 @@
+:root {
+  --blue: #007bff;
+  --green: #1b7741;
+  --card: #ffffff;
+  --muted: #6b7280;
+  --accent: var(--green);
+}
+
 .sobre-hero {
   display: flex;
   gap: 2rem;
   align-items: center;
   margin: 2rem 0;
   padding: 1.5rem;
-  background: linear-gradient(90deg, rgba(0, 123, 255, 0.05), transparent);
+  background: linear-gradient(90deg, rgba(0, 123, 255, 0.15), rgba(39, 174, 96, 0.10));
   border-radius: 12px;
 }
 
@@ -15,6 +23,7 @@
 .hero-content h1 {
   font-size: 2rem;
   margin: 0 0 0.5rem 0;
+  color: var(--green);
 }
 
 .lead {
@@ -47,7 +56,8 @@
   background: var(--card);
   padding: 1rem;
   border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+  border-left: 4px solid var(--green);
+  box-shadow: 0 4px 10px rgba(0, 123, 255, 0.05);
 }
 
 .numeros {
@@ -61,7 +71,7 @@
 }
 
 .stat {
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.02), transparent);
+  background: linear-gradient(180deg, rgba(0, 123, 255, 0.06), rgba(39, 174, 96, 0.04));
   padding: 1rem;
   border-radius: 8px;
   text-align: center;
@@ -76,11 +86,12 @@
 .historia .timeline li {
   margin-bottom: 1rem;
   padding-left: 0.5rem;
-  border-left: 3px solid var(--accent, #007bff);
+  border-left: 3px solid var(--green);
 }
 
 .historia .timeline h4 {
   margin: 0;
+  color: var(--green);
 }
 
 .equipe {
@@ -99,6 +110,7 @@
   background: var(--card);
   padding: 0.8rem;
   border-radius: 10px;
+  border-top: 4px solid var(--blue);
 }
 
 .team-member img {
@@ -120,10 +132,11 @@
 }
 
 .depo {
-  background: #f9f9fb;
+  background: #f9fbf9;
   padding: 1rem;
   border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+  border-left: 4px solid var(--blue);
+  box-shadow: 0 2px 6px rgba(39, 174, 96, 0.06);
 }
 
 .depo cite {
@@ -137,7 +150,7 @@
   text-align: center;
   padding: 1.5rem;
   border-radius: 10px;
-  background: linear-gradient(90deg, rgba(0, 123, 255, 0.03), transparent);
+  background: linear-gradient(90deg, rgba(39, 174, 96, 0.10), rgba(0, 123, 255, 0.10));
 }
 
 .cta-row {
@@ -155,4 +168,25 @@
   .hero-image {
     width: 100%;
   }
+}
+
+/* ------------------------------------ */
+/*       ALTERAÇÃO PEDIDA — BOTÕES      */
+/* ------------------------------------ */
+
+.cta,
+.cta.secondary {
+  background: var(--blue) !important;
+  color: #fff !important;
+  padding: 0.75rem 1.2rem;
+  border-radius: 8px;
+  display: inline-block;
+  text-decoration: none;
+  transition: 0.25s ease;
+}
+
+.cta:hover,
+.cta.secondary:hover {
+  background: var(--green) !important;
+  color: #fff !important;
 }

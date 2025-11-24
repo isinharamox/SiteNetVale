@@ -1,3 +1,11 @@
+:root {
+  --blue: #007BFF;
+  --green: #1b7741;
+  --green-dark: #064e1e;
+  --text-dark: #0f172a;
+  --card-shadow: rgba(0, 0, 0, 0.1);
+}
+
 #planos {
   padding: 60px 20px;
   background-color: #f9f9f9;
@@ -7,7 +15,7 @@
 #planos h2 {
   font-size: 2.5rem;
   margin-bottom: 40px;
-  color: #135206;
+  color: var(--green);
 }
 
 .planos-container {
@@ -15,38 +23,46 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 30px;
-  align-items: stretch; /* garante que todos os cards tenham altura igual */
+  align-items: stretch;
 }
 
-.plano {
+.plano {  --green: #1d855f;
+
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* empurra o botão para o final do card */
+  justify-content: space-between;
   background-color: #fff;
-  border: 2px solid #135206;
+  border: 2px solid var(--blue); /* azul para bordas principais */
   border-radius: 12px;
   padding: 30px 20px;
   width: 260px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 10px 25px var(--card-shadow);
+  transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+}
+
+.plano:hover {
+  transform: translateY(-5px);
+  border-color: var(--green);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
 }
 
 .preco {
   font-size: 1.2rem;
   font-weight: bold;
   margin: 10px 0;
-  color: #007BFF; /* azul */
+  color: var(--blue); /* azul nos preços */
 }
 
 .plano ul {
   list-style: none;
   padding: 0;
   margin: 0 0 20px 0;
+  color: var(--text-dark);
 }
 
 .btn-adesao {
-  margin-top: auto; /* garante que o botão vá para o fim do card */
-  background-color: #135206;
+  margin-top: auto;
+  background-color: var(--blue); /* azul padrão */
   color: #fff;
   border: none;
   padding: 10px 20px;
@@ -57,7 +73,7 @@
 }
 
 .btn-adesao:hover {
-  background-color: #0f3b05;
+  background-color: var(--green); /* verde ao passar o mouse */
 }
 
 
