@@ -1,11 +1,11 @@
 :root {
-  --brand: #135206d3; /* verde da marca */
+  --brand: #197407d3; /* verde da marca */
   --green: #c2230ed3; /* destaque extra */
   --dark: #0f1724; /* cor do texto principal */
   --muted: #6b7280; /* cor secundária */
   --card: #ffffff; /* fundo dos blocos */
   --radius: 12px; /* arredondamento padrão */
-  --primary: #004aad; /* cor primária para planos */
+  --primary: #08264e; /* cor primária para planos */
 }
 
 * {
@@ -65,6 +65,19 @@ nav {
   justify-content: center;
   color: #fff;
   font-weight: 700;
+}
+
+.site-header {
+  display: flex;
+  justify-content: space-between; /* espaço entre título e imagem */
+  align-items: center;
+  padding: 1.5rem 2rem; /* aumenta um pouco a altura do cabeçalho */
+  background-color: #f5f5f5; /* opcional: cor de fundo */
+}
+
+.header-logo {
+  height: 60px; /* ajusta a altura da imagem */
+  object-fit: contain;
 }
 
 .nav-links {
@@ -158,6 +171,16 @@ nav {
   padding: 18px;
   border-radius: 12px;
   box-shadow: 0 6px 18px rgba(11, 94, 215, 0.04);
+
+  /* Listra verde à esquerda */
+  border-left: 6px solid var(--brand);
+  padding-left: 12px; /* ajusta o espaço para o conteúdo */
+  transition: border-color 0.3s ease;
+}
+
+.feature:hover {
+  border-left-color: var(--primary); /* muda para azul ao passar o mouse */
+  transform: translateY(-2px); /* efeito leve de destaque */
 }
 
 /* PLANOS ATUALIZADOS */
@@ -178,12 +201,20 @@ nav {
   max-width: 280px;
   background: #fff;
   border-radius: 16px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   text-align: center;
+
+  /* fitinha verde ao redor */
+  box-shadow: 0 0 0 3px var(--brand); /* fitinha ao redor */
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.plan:hover {
+  box-shadow: 0 0 0 3px var(--primary); /* muda para azul ao passar o mouse */
+  transform: translateY(-4px); /* efeito leve de destaque */
 }
 
 .plan h3 {
@@ -206,17 +237,28 @@ nav {
 .plan .cta {
   margin-top: auto; /* empurra o botão para o final do bloco */
   display: inline-block;
-  background: var(--primary);
+  background: var(--brand); /* verde por padrão */
   color: #fff;
   padding: 10px 18px;
   border-radius: 8px;
   text-decoration: none;
-  transition: 0.3s;
+  transition: 0.3s ease;
 }
 
 .plan .cta:hover {
-  background: #0077ff;
-  transform: scale(1.05);
+  background: var(--primary); /* azul ao passar o mouse */
+  transform: scale(1.05); /* leve destaque */
+  color: #fff;
+}
+.cta:hover {
+  background: var(--primary) !important; /* azul */
+  color: #fff !important;
+}
+
+.cta.secondary:hover {
+  background: var(--primary) !important; /* azul */
+  color: #fff !important;
+  border-color: var(--primary) !important;
 }
 
 .testimonials {
@@ -230,7 +272,21 @@ nav {
   grid-template-columns: 1fr 360px;
   gap: 18px;
   margin: 40px 0;
+
+  /* Listra verde à esquerda */
+  border-left: 6px solid var(--brand);
+  padding-left: 12px; /* ajusta o conteúdo para não encostar na listra */
+  border-radius: 12px; /* mantém cantos arredondados */
+  background: var(--card);
+  box-shadow: 0 6px 18px rgba(11, 94, 215, 0.04);
+  transition: border-color 0.3s ease, transform 0.3s ease;
 }
+
+.contact:hover {
+  border-left-color: var(--primary); /* muda para azul ao passar o mouse */
+  transform: translateY(-2px); /* leve destaque */
+}
+
 
 footer {
   padding: 28px 0;

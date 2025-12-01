@@ -1,6 +1,6 @@
 :root {
-  --blue: #007bff;
-  --green: #1b7741;
+  --blue: #187e2e;;
+  --green: #0a2f57;
   --card: #ffffff;
   --muted: #6b7280;
   --accent: var(--green);
@@ -12,7 +12,11 @@
   align-items: center;
   margin: 2rem 0;
   padding: 1.5rem;
-  background: linear-gradient(90deg, rgba(0, 123, 255, 0.15), rgba(39, 174, 96, 0.10));
+  background: linear-gradient(
+    90deg,
+    rgba(0, 123, 255, 0.15),
+    rgba(39, 174, 96, 0.1)
+  );
   border-radius: 12px;
 }
 
@@ -56,10 +60,9 @@
   background: var(--card);
   padding: 1rem;
   border-radius: 10px;
-  border-left: 4px solid var(--green);
+  border-left: 4px solid var(--blue); /* verde */
   box-shadow: 0 4px 10px rgba(0, 123, 255, 0.05);
 }
-
 .numeros {
   margin: 2rem 0;
 }
@@ -71,22 +74,20 @@
 }
 
 .stat {
-  background: linear-gradient(180deg, rgba(0, 123, 255, 0.06), rgba(39, 174, 96, 0.04));
+  background: linear-gradient(
+    180deg,
+    rgba(0, 123, 255, 0.06),
+    rgba(39, 174, 96, 0.04)
+  );
   padding: 1rem;
   border-radius: 8px;
   text-align: center;
 }
 
-.historia .timeline {
-  list-style: none;
-  padding: 0;
-  margin: 1rem 0;
-}
-
 .historia .timeline li {
   margin-bottom: 1rem;
   padding-left: 0.5rem;
-  border-left: 3px solid var(--green);
+  border-left: 3px solid var(--blue);
 }
 
 .historia .timeline h4 {
@@ -135,7 +136,7 @@
   background: #f9fbf9;
   padding: 1rem;
   border-radius: 8px;
-  border-left: 4px solid var(--blue);
+  border-left: 4px solid var(--blue); /* alterado de azul para verde */
   box-shadow: 0 2px 6px rgba(39, 174, 96, 0.06);
 }
 
@@ -150,7 +151,11 @@
   text-align: center;
   padding: 1.5rem;
   border-radius: 10px;
-  background: linear-gradient(90deg, rgba(39, 174, 96, 0.10), rgba(0, 123, 255, 0.10));
+  background: linear-gradient(
+    90deg,
+    rgba(39, 174, 96, 0.1),
+    rgba(0, 123, 255, 0.1)
+  );
 }
 
 .cta-row {

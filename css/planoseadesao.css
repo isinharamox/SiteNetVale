@@ -1,7 +1,8 @@
+
 :root {
-  --blue: #007BFF;
-  --green: #1b7741;
-  --green-dark: #064e1e;
+  --blue: #1b8d18;      /* antes era azul → agora recebe o verde */
+  --green: #0e3f88;     /* antes era verde → agora recebe o azul */
+  --green-dark: #075220; /* antes era verde escuro → agora azul escuro */
   --text-dark: #0f172a;
   --card-shadow: rgba(0, 0, 0, 0.1);
 }
@@ -15,7 +16,7 @@
 #planos h2 {
   font-size: 2.5rem;
   margin-bottom: 40px;
-  color: var(--green);
+  color: var(--green); /* agora azul */
 }
 
 .planos-container {
@@ -26,23 +27,27 @@
   align-items: stretch;
 }
 
-.plano {  --green: #1d855f;
+.plano {
+  --green: #0e3f88; /* antes verde → agora azul */
 
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   background-color: #fff;
-  border: 2px solid var(--blue); /* azul para bordas principais */
+  border: 2px solid var(--blue); /* antes azul → agora verde */
   border-radius: 12px;
   padding: 30px 20px;
   width: 260px;
   box-shadow: 0 10px 25px var(--card-shadow);
-  transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s,
+    border-color 0.3s;
 }
 
 .plano:hover {
   transform: translateY(-5px);
-  border-color: var(--green);
+  border-color: var(--green); /* agora azul */
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
 }
 
@@ -50,7 +55,7 @@
   font-size: 1.2rem;
   font-weight: bold;
   margin: 10px 0;
-  color: var(--blue); /* azul nos preços */
+  color: var(--blue); /* antes azul → agora verde */
 }
 
 .plano ul {
@@ -62,7 +67,7 @@
 
 .btn-adesao {
   margin-top: auto;
-  background-color: var(--blue); /* azul padrão */
+  background-color: var(--blue); /* antes azul → agora verde */
   color: #fff;
   border: none;
   padding: 10px 20px;
@@ -73,9 +78,8 @@
 }
 
 .btn-adesao:hover {
-  background-color: var(--green); /* verde ao passar o mouse */
+  background-color: var(--green); /* antes verde → agora azul */
 }
-
 
 @media (max-width: 768px) {
   .planos-container {

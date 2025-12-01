@@ -1,7 +1,7 @@
 :root {
-  --blue: #007bff;
-  --blue-dark: #0056b3;
-  --green: #1b7741;
+  --blue-dark: #031324;
+  --blue: #0d770a;      /* antes era azul → agora recebe o verde */
+  --green: #092f68; 
   --green-dark: #064e1e;
   --text-dark: #0f172a;
 }
@@ -14,7 +14,7 @@
 
 .comentarios h2 {
   margin-bottom: 1rem;
-  color: var(--blue);
+  color: var(--green);
 }
 
 .comentario-form {
@@ -116,4 +116,3 @@
   background-color: var(--green);
   color: #fff !important; /* mantém branco no hover também */
 }
-

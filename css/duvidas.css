@@ -1,9 +1,9 @@
 :root {
-  --blue: #0057d8;      /* azul principal */
-  --green: #1b7741;
-  --text: #0f172a;      /* texto escuro */
-  --muted: #64748b;     /* texto secundário */
-  --card: #ffffff;      /* fundo do card */
+  --blue: #1b8d18; /* antes era azul → agora recebe o verde */
+  --green: #0e3f88; /* antes era verde → agora recebe o azul */
+  --text: #0f172a;
+  --muted: #64748b;
+  --card: #ffffff;
 }
 
 .faq-container {
@@ -15,14 +15,14 @@
   background: var(--card);
   margin-bottom: 1rem;
   border-radius: 12px;
-  border: 2px solid var(--blue);
+  border: 2px solid var(--blue);  /* agora é verde */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
   overflow: hidden;
   transition: border-color 0.3s ease;
 }
 
 .faq-item.active {
-  border-color: var(--green);
+  border-color: var(--green); /* agora é azul */
 }
 
 .faq-question {
@@ -32,7 +32,7 @@
   font-weight: 600;
   cursor: pointer;
   border: none;
-  background: var(--blue);
+  background: var(--blue); /* agora verde */
   color: #fff;
   display: flex;
   justify-content: space-between;
@@ -42,13 +42,13 @@
 }
 
 .faq-question:hover {
-  background: var(--green);
+  background: var(--green); /* agora azul */
 }
 
 .faq-answer {
   max-height: 0;
   overflow: hidden;
-  transition: 
+  transition:
     max-height 0.3s ease-out,
     padding 0.3s ease-out;
   padding: 0 1.2rem;
