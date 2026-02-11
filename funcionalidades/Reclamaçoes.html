@@ -29,6 +29,7 @@
       <section class="contato-reclamacoes">
         <h2>Entre em Contato</h2>
         <p>Escolha o canal que preferir para registrar sua reclamação:</p>
+
         <p>
           <a
             class="cta"
@@ -37,7 +38,6 @@
             🚨 Falar no WhatsApp
           </a>
         </p>
-        <p></p>
 
         <p>
           <a
@@ -52,6 +52,7 @@
 
       <section class="orientacoes">
         <h2>Antes de enviar, verifique:</h2>
+
         <ul>
           <li>
             Se o seu <strong>roteador está ligado</strong> e os cabos estão
@@ -66,6 +67,7 @@
             <strong>outros dispositivos</strong> (celular, notebook, etc).
           </li>
         </ul>
+
         <p>
           Essas verificações simples podem ajudar a resolver rapidamente algumas
           falhas comuns. 😉
@@ -76,7 +78,7 @@
         <h2>Horário de Atendimento</h2>
         <p>
           📅 Segunda a Sexta: <strong>08h às 12h - 13h às 17h</strong><br />
-          📞 Sábados: <strong>08h às 12h</strong><br />
+          📞 Sábados: <strong>08h às 12h</strong>
         </p>
       </section>
 
@@ -87,87 +89,31 @@
           Agradecemos pela compreensão e paciência. 💙
         </p>
       </section>
-
-      <section class="comentarios">
-        <h2>Comentários Públicos</h2>
-        <form id="comentarioForm" class="comentario-form">
-          <input
-            type="text"
-            id="nome"
-            placeholder="Seu nome"
-            required
-            maxlength="50"
-          />
-          <textarea
-            id="mensagem"
-            rows="4"
-            placeholder="Deixe aqui sua reclamação ou comentário público..."
-            required
-            maxlength="300"
-          ></textarea>
-          <button type="submit">Publicar Comentário</button>
-        </form>
-
-        <div id="listaComentarios"></div>
-      </section>
     </main>
 
+    <footer style="margin-top: 4rem">
+      <div
+        class="container"
+        style="
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          flex-wrap: wrap;
+          gap: 12px;
+        "
+      >
+        <div>
+          <strong>Net Vale</strong><br />
+          <span style="color: var(--muted)">Conectando o seu mundo</span>
+        </div>
+        <div style="text-align: right; color: var(--muted)">
+          © <span id="ano"></span> Net Vale — Todos os direitos reservados
+        </div>
+      </div>
+    </footer>
+
     <script>
-      const form = document.getElementById("comentarioForm");
-      const lista = document.getElementById("listaComentarios");
-
-      let comentarios = JSON.parse(localStorage.getItem("comentarios")) || [];
-
-      function salvarComentarios() {
-        localStorage.setItem("comentarios", JSON.stringify(comentarios));
-      }
-
-      function renderComentarios() {
-        lista.innerHTML = "";
-        comentarios.forEach((c, index) => {
-          const div = document.createElement("div");
-          div.className = "comentario";
-          div.innerHTML = `
-            <button class="btn-apagar" title="Apagar comentário" data-index="${index}">🗑️</button>
-            <strong>${c.nome}</strong>
-            <p>${c.mensagem}</p>
-            <small>Publicado em ${c.data}</small>
-          `;
-          lista.prepend(div);
-        });
-
-        document.querySelectorAll(".btn-apagar").forEach((btn) => {
-          btn.addEventListener("click", (e) => {
-            const index = e.target.dataset.index;
-            if (confirm("Deseja realmente apagar este comentário?")) {
-              comentarios.splice(index, 1);
-              salvarComentarios();
-              renderComentarios();
-            }
-          });
-        });
-      }
-
-      renderComentarios();
-
-      form.addEventListener("submit", (e) => {
-        e.preventDefault();
-        const nome = document.getElementById("nome").value.trim();
-        const mensagem = document.getElementById("mensagem").value.trim();
-
-        if (!nome || !mensagem) return alert("Preencha todos os campos!");
-
-        const novoComentario = {
-          nome,
-          mensagem,
-          data: new Date().toLocaleString("pt-BR"),
-        };
-
-        comentarios.push(novoComentario);
-        salvarComentarios();
-        renderComentarios();
-        form.reset();
-      });
+      document.getElementById("ano").textContent = new Date().getFullYear();
     </script>
   </body>
 </html>
