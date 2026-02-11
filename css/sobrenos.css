@@ -1,70 +1,89 @@
 :root {
-  --blue: #187e2e;;
+  --blue: #187e2e;
   --green: #0a2f57;
   --card: #ffffff;
   --muted: #6b7280;
-  --accent: var(--green);
+  --bg-soft: #f4f8f6;
 }
 
-.sobre-hero {
-  display: flex;
-  gap: 2rem;
-  align-items: center;
-  margin: 2rem 0;
-  padding: 1.5rem;
-  background: linear-gradient(
-    90deg,
-    rgba(0, 123, 255, 0.15),
-    rgba(39, 174, 96, 0.1)
-  );
+/* ================= FAIXA VERDE PADRÃO ================= */
+
+.box-left-green {
+  border-left: 6px solid var(--blue);
+  padding-left: 16px;
   border-radius: 12px;
 }
 
-.hero-content {
-  flex: 1 1 420px;
+/* ================= HERO SOBRE NÓS ================= */
+
+.sobre-hero {
+  margin: 2.5rem 0;
+  padding: 2rem;
+  border-radius: 18px;
+  background: linear-gradient(
+    135deg,
+    rgba(24, 126, 46, 0.12),
+    rgba(10, 47, 87, 0.08)
+  );
 }
 
-.hero-content h1 {
-  font-size: 2rem;
-  margin: 0 0 0.5rem 0;
+.hero-content {
+  max-width: 720px;
+}
+
+.sobre-hero h1 {
+  font-size: 2.1rem;      /* antes: 2.4rem */
+  line-height: 1.15;
+  margin-bottom: 1rem;
   color: var(--green);
+  white-space: nowrap;   /* garante que fique em uma linha */
 }
 
 .lead {
-  margin-bottom: 1rem;
+  font-size: 1.05rem;
   color: var(--muted);
+  margin-bottom: 1.5rem;
 }
 
-.hero-image {
-  flex: 0 0 320px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.hero-image img {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-  object-fit: cover;
-}
+/* ================= MISSÃO / VISÃO / VALORES ================= */
 
 .mvvs {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1rem;
-  margin: 2rem 0;
+  gap: 1.2rem;
+  margin: 2.5rem 0;
 }
 
 .mvvs .card {
   background: var(--card);
-  padding: 1rem;
-  border-radius: 10px;
-  border-left: 4px solid var(--blue); /* verde */
-  box-shadow: 0 4px 10px rgba(0, 123, 255, 0.05);
+  padding: 1.2rem;
+  border-radius: 12px;
+  border-left: 5px solid var(--blue);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
 }
+
+.mvvs h3 {
+  color: var(--green);
+  margin-bottom: 0.5rem;
+}
+
+.mvvs ul {
+  padding-left: 1rem;
+}
+
+.mvvs li {
+  margin-bottom: 0.4rem;
+}
+
+/* ================= NÚMEROS ================= */
+
 .numeros {
-  margin: 2rem 0;
+  margin: 3rem 0;
+}
+
+.numeros h2 {
+  margin-bottom: 1rem;
+  color: var(--green);
 }
 
 .numeros .grid {
@@ -74,124 +93,143 @@
 }
 
 .stat {
-  background: linear-gradient(
-    180deg,
-    rgba(0, 123, 255, 0.06),
-    rgba(39, 174, 96, 0.04)
-  );
-  padding: 1rem;
-  border-radius: 8px;
+  background: var(--bg-soft);
+  padding: 1.2rem;
+  border-radius: 12px;
   text-align: center;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
 }
 
-.historia .timeline li {
-  margin-bottom: 1rem;
-  padding-left: 0.5rem;
-  border-left: 3px solid var(--blue);
-}
-
-.historia .timeline h4 {
-  margin: 0;
+.stat strong {
+  display: block;
+  font-size: 1.6rem;
   color: var(--green);
 }
 
+.stat span {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+/* ================= HISTÓRIA ================= */
+
+.historia {
+  margin: 3rem 0;
+}
+
+.historia h2 {
+  margin-bottom: 1rem;
+  color: var(--green);
+}
+
+.historia .timeline {
+  list-style: none;
+  padding: 0;
+}
+
+.historia .timeline li {
+  margin-bottom: 1.2rem;
+  padding-left: 1rem;
+  border-left: 4px solid var(--blue);
+}
+
+.historia h4 {
+  margin-bottom: 0.3rem;
+  color: var(--green);
+}
+
+/* ================= EQUIPE / QUEM SOMOS ================= */
+
 .equipe {
-  margin: 2rem 0;
+  margin: 3.5rem 0;
+}
+
+.equipe h2 {
+  color: var(--green);
+}
+
+.equipe .subtitle {
+  color: var(--muted);
+  margin-bottom: 1.8rem;
 }
 
 .team-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 1rem;
-  align-items: start;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.6rem;
 }
 
 .team-member {
-  text-align: center;
   background: var(--card);
-  padding: 0.8rem;
-  border-radius: 10px;
-  border-top: 4px solid var(--blue);
+  border-radius: 16px;
+  padding: 1.5rem;
+  text-align: center;
+
+  border-left: 6px solid var(--blue);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+
+  transition: transform 0.2s ease, border-color 0.3s ease;
+}
+
+.team-member:hover {
+  transform: translateY(-4px);
+  border-left-color: var(--green);
 }
 
 .team-member img {
-  width: 100%;
-  height: 140px;
+  width: 120px;
+  height: 120px;
   object-fit: cover;
-  border-radius: 8px;
-  margin-bottom: 0.5rem;
+  border-radius: 50%;
+  margin-bottom: 0.9rem;
 }
 
-.depoimentos {
-  margin: 2rem 0;
-}
-
-.depo-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 1rem;
-}
-
-.depo {
-  background: #f9fbf9;
-  padding: 1rem;
-  border-radius: 8px;
-  border-left: 4px solid var(--blue); /* alterado de azul para verde */
-  box-shadow: 0 2px 6px rgba(39, 174, 96, 0.06);
-}
-
-.depo cite {
+.team-member strong {
   display: block;
-  margin-top: 0.5rem;
+  font-size: 1.05rem;
+  color: var(--green);
+}
+
+.team-member span {
+  font-size: 0.9rem;
   color: var(--muted);
 }
 
+/* ================= CTA FINAL ================= */
+
 .cta-final {
-  margin: 2.5rem 0;
-  text-align: center;
-  padding: 1.5rem;
-  border-radius: 10px;
+  margin: 4rem 0;
+  padding: 2.5rem;
+  border-radius: 18px;
   background: linear-gradient(
-    90deg,
-    rgba(39, 174, 96, 0.1),
-    rgba(0, 123, 255, 0.1)
+    135deg,
+    rgba(24, 126, 46, 0.15),
+    rgba(10, 47, 87, 0.12)
   );
+  text-align: center;
+}
+
+.cta-final h2 {
+  color: var(--green);
+  margin-bottom: 0.6rem;
+}
+
+.cta-final p {
+  color: var(--muted);
+  margin-bottom: 1.5rem;
 }
 
 .cta-row {
-  margin-top: 1rem;
   display: flex;
-  gap: 1rem;
   justify-content: center;
+  gap: 12px;
   flex-wrap: wrap;
 }
 
-@media (max-width: 800px) {
-  .sobre-hero {
-    flex-direction: column-reverse;
+/* ================= RESPONSIVO ================= */
+
+@media (max-width: 768px) {
+  .sobre-hero h1 {
+    font-size: 1.9rem;
   }
-  .hero-image {
-    width: 100%;
-  }
-}
-
-/* ------------------------------------ */
-/*       ALTERAÇÃO PEDIDA — BOTÕES      */
-/* ------------------------------------ */
-
-.cta,
-.cta.secondary {
-  background: var(--blue) !important;
-  color: #fff !important;
-  padding: 0.75rem 1.2rem;
-  border-radius: 8px;
-  display: inline-block;
-  text-decoration: none;
-  transition: 0.25s ease;
-}
-
-.cta:hover,
-.cta.secondary:hover {
-  background: var(--green) !important;
-  color: #fff !important;
 }
